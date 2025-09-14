@@ -36,11 +36,13 @@ Optimization: PuLP (Linear Programming)
 
 Visualization (optional): matplotlib
 
-🚀 Setup
+🚀 ## Run (quick demo with synthetic data)
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-
+python src/generate_synth_data.py --out data/demand.csv
+python src/train_arima.py --input data/demand.csv --out models/arima.pkl
+python src/train_lstm.py --input data/demand.csv --out models/lstm.keras
+python src/hybrid_forecast.py --input data/demand.csv --arima models/arima.pkl --lstm models/lstm.keras --out data/forecast.csv
+python src/plot_forecast.py --input data/forecast.csv
 ```
