@@ -36,7 +36,7 @@ Optimization: PuLP (Linear Programming)
 
 Visualization (optional): matplotlib
 
-🚀 ## Run (quick demo with synthetic data)
+🚀 ##Run (quick demo with synthetic data)
 
 ```bash
 pip install -r requirements.txt
